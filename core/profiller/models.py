@@ -17,7 +17,6 @@ class Profil(models.Model):
     class Meta:
         verbose_name_plural = "Profiller"
     
-
     def save(self , *args, **kwargs):
         super().save(*args, **kwargs)
         if self.photo:
