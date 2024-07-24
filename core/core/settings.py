@@ -37,9 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'profiller.apps.ProfillerConfig',
-    'rest_framework',
     'django_extensions',
+
+    'rest_framework',
+    'rest_framework.authtoken',
+
+    'profiller.apps.ProfillerConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -121,6 +125,15 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'uploads'
+
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication', # tokenlarla istek yapılacak
+        'rest_framework.authentication.SessionAuthentication', # browsable api sayfası için
+    ]
+}
 
 
 
