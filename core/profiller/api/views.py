@@ -2,7 +2,7 @@ from rest_framework import generics
 from rest_framework.permissions import IsAdminUser
 from profiller.models import Profil
 from profiller.api.serializers import ProfilSerializer
-from rest_framework.viewsets import ReadOnlyModelViewSet, ModelViewSet
+from rest_framework.viewsets import ModelViewSet
 
 
 class ProfilList(generics.ListCreateAPIView):
