@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
 
     'profiller.apps.ProfillerConfig',
+    'users.apps.UsersConfig',
 
 ]
 
@@ -125,6 +126,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'uploads'
+
+
+AUTH_USER_MODEL = 'users.User'
 
 
 

@@ -16,5 +16,14 @@ def create_first_state_message(sender, instance, created, **kwargs):
     if created:
         ProfilState.objects.create(
             user_profil = instance,
-            state_message = f'{instance.user.username} R2Y ailesine katıldı.'
+            state_message = f'{instance.user.username} Baykar ailesine katıldı.'
         )
+
+
+# @receiver(post_save, sender= Profil)
+# def create_first_Post(sender, instance, created, **kwargs):
+#     if created:
+#         Post.objects.create(
+#             user_info = instance,
+#             content = f'Ben {instance.user.username}, Baykar Social kullanmaya başladım.',
+#         )
